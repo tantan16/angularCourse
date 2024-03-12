@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AtributoComponent {
  messageType = 1;
- inputValue = 'Hooooola';
+ inputValue = 'Hooooola a todos amigos';
 
 }
