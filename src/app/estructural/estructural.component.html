@@ -1,1 +1,18 @@
-<div> Mensaje de error: algo salio mal </div>
+<div class="error" *ngIf="isError">
+    Mensaje de error: algo salió mal
+    <p> lo sentimos</p>
+    <span> vuelve a intentarlo</span>
+</div>
+
+
+<button (click)="showError()">Mostrar el error </button>
+
+<ol>
+    <li *ngFor="let section of sections">{{section.name}}</li>
+</ol>
+
+<ng-template #noContent>
+    Contenido no disponible
+</ng-template>
+
+<ng-container *ngTemplateOutlet = "noContent"> noContent </ng-container>

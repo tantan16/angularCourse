@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./atributo.component.scss']
 })
 export class AtributoComponent {
+  constructor(){}
  messageType = 1;
- inputValue = 'Hooooola a todos amigos';
+ inputValue = 'Holiwis';
+
+ ngOnInit():void{}
 
 }
