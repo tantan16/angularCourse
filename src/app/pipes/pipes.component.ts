@@ -7,11 +7,14 @@ import { Component,OnInit } from '@angular/core';
 })
 export class PipesComponent {
   name = 'Tania';
-  date = '2024-03-20T18:59:31.2382'
+  date = '2024-03-20T18:59:31.2382';
+  estado = 0;
  
   ngOnInit():void{}
 
-  constructor(){}
+  changeState(){
+    this.estado = 1;
+  }
   }
 
 

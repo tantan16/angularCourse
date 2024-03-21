@@ -9,3 +9,8 @@
 
 <p> Date </p>
 {{date | date:"short"}}
+
+
+<p> Estado de transacción: {{estado | estados}} </p>
+
+<button (click) = "changeState()">Cambiar de estado</button>

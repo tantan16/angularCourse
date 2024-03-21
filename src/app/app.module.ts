@@ -9,6 +9,7 @@ import { AtributoComponent } from './atributo/atributo.component';
 import { FormsModule } from '@angular/forms';
 import { PipesComponent } from './pipes/pipes.component';
 import { CompraComponent } from './compra/compra.component';
+import { EstadosPipe } from './pipes/estados.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CompraComponent } from './compra/compra.component';
     EstructuralComponent,
     AtributoComponent,
     PipesComponent,
-    CompraComponent
+    CompraComponent,
+    EstadosPipe
   ],
   imports: [
     BrowserModule,
