@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { PipesComponent } from './pipes/pipes.component';
 import { EstadosPipe } from './pipes/estados.pipe';
 import { CompraModule } from './compra/compra.module';
+import { VentaModule } from './venta/venta.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CompraModule } from './compra/compra.module';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    CompraModule
+    CompraModule,
+    VentaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

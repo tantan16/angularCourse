@@ -6,19 +6,25 @@ import { ListadoComponent } from './compra/listado/listado.component';
 import { NuevaComponent } from './compra/nueva/nueva.component';
 import { HistorialComprasComponent } from './compra/historial-compras/historial-compras.component';
 import { AuthGuard } from './auth.guard';
-import { CompraModule } from './compra/compra.module';
 
 const routes: Routes = [
-  {path:'', redirectTo: 'pipes', pathMatch: 'full'},
-  {path: 'pipes', component: PipesComponent},
-  {path: 'estructural', component: EstructuralComponent},
-  {path: 'compra', 
-  component:ListadoComponent, 
-  canActivate: [AuthGuard],
-  children:[
-    {path: 'nueva', component: NuevaComponent},
-    {path: 'historial', component: HistorialComprasComponent}
-  ]}
+  { path: '', redirectTo: 'pipes', pathMatch: 'full' },
+  { path: 'pipes', component: PipesComponent },
+  { path: 'estructural', component: EstructuralComponent },
+  {
+    path: 'compra',
+    component: ListadoComponent,
+    canActivate: [AuthGuard],
+    children: [
+      { path: 'nueva', component: NuevaComponent },
+      { path: 'historial', component: HistorialComprasComponent }
+    ]
+  },
+  {
+    path: 'venta',
+    loadChildren: () =>
+      import('./venta/venta.module').then((m) => m.VentaModule)
+  }
 ];
 
 @NgModule({
