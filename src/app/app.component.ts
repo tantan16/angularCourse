@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'miprimerproyectoangular';
+  constructor(){
+    localStorage.setItem('id', '1234')
+  }
 }
