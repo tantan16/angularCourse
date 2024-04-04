@@ -1,0 +1,16 @@
+<div>
+    <input 
+type="text" 
+placeholder="Nombre"
+[formControl]="name">
+    <pre>
+       <code> {{name | json}} </code>
+    </pre>
+</div>
+
+<div>
+<input type="checkbox" [formControl]="isChecked">
+{{isChecked.value}}
+</div>
+
+<button [disabled]="name.errors">Enviar</button>

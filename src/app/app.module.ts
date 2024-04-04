@@ -6,11 +6,12 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { EstructuralComponent } from './estructural/estructural.component';
 import { AtributoComponent } from './atributo/atributo.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PipesComponent } from './pipes/pipes.component';
 import { EstadosPipe } from './pipes/estados.pipe';
 import { CompraModule } from './compra/compra.module';
 import { VentaModule } from './venta/venta.module';
+import { FormulariosComponent } from './formularios/formularios.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +21,15 @@ import { VentaModule } from './venta/venta.module';
     AtributoComponent,
     PipesComponent,
     EstadosPipe,
+    FormulariosComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     CompraModule,
-    VentaModule
+    VentaModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
