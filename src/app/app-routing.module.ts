@@ -7,6 +7,7 @@ import { NuevaComponent } from './compra/nueva/nueva.component';
 import { HistorialComprasComponent } from './compra/historial-compras/historial-compras.component';
 import { AuthGuard } from './auth.guard';
 import { FormulariosComponent } from './formularios/formularios.component';
+import { TodosComponent } from './todos/todos.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'pipes', pathMatch: 'full' },
@@ -26,7 +27,8 @@ const routes: Routes = [
     loadChildren: () =>
       import('./venta/venta.module').then((m) => m.VentaModule)
   },
-  { path: 'formularios', component: FormulariosComponent}
+  { path: 'formularios', component: FormulariosComponent},
+  { path: 'todos', component: TodosComponent}
 ];
 
 @NgModule({

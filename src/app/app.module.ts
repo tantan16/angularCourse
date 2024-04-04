@@ -12,6 +12,8 @@ import { EstadosPipe } from './pipes/estados.pipe';
 import { CompraModule } from './compra/compra.module';
 import { VentaModule } from './venta/venta.module';
 import { FormulariosComponent } from './formularios/formularios.component';
+import { TodosComponent } from './todos/todos.component';
+import{HttpClient, HttpClientModule}from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { FormulariosComponent } from './formularios/formularios.component';
     PipesComponent,
     EstadosPipe,
     FormulariosComponent,
+    TodosComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { FormulariosComponent } from './formularios/formularios.component';
     FormsModule,
     CompraModule,
     VentaModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
