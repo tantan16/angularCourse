@@ -12,16 +12,22 @@ export class TodosComponent {
   constructor(private todosService: TodoService) {}
 
   ngOnInit(): void {
-    this.todosService.getTodos().subscribe((res: any) => {
-      console.log(res);
-      this.todos = res;
-      console.log(this.todos);
-    });
+    // this.todosService.getTodos().subscribe((res: any) => {
+    //   console.log(res);
+    //   this.todos = res;
+    //   console.log(this.todos);
+    // });
 
-    this.todosService
-      .getComments(10)
-      .subscribe((res: any) => console.log('Comments: ', res));
-    
-    this.todosService.getPosts().subscribe((res) => console.log('Posts: ', res))  
-    }
+    // this.todosService
+    //   .getComments(10)
+    //   .subscribe((res: any) => console.log('Comments: ', res));
+
+    // this.todosService
+    //   .getPosts()
+    //   .subscribe((res) => console.log('Posts: ', res));
+  }
+
+  updatePost(){
+    this.todosService.postSource.next('Información');
+  }
 }

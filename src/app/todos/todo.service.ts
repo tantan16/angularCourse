@@ -1,10 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TodoService {
+
+  postSource = new Subject();
+  posts$ = this.postSource.asObservable();
+  
   constructor(private http: HttpClient) {}
 
   getTodos() {
