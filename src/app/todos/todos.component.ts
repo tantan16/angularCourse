@@ -21,5 +21,7 @@ export class TodosComponent {
     this.todosService
       .getComments(10)
       .subscribe((res: any) => console.log('Comments: ', res));
-  }
+    
+    this.todosService.getPosts().subscribe((res) => console.log('Posts: ', res))  
+    }
 }

@@ -13,7 +13,8 @@ import { CompraModule } from './compra/compra.module';
 import { VentaModule } from './venta/venta.module';
 import { FormulariosComponent } from './formularios/formularios.component';
 import { TodosComponent } from './todos/todos.component';
-import{HttpClient, HttpClientModule}from '@angular/common/http'
+import{HTTP_INTERCEPTORS, HttpClient, HttpClientModule}from '@angular/common/http'
+import { InterceptorService } from './services/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,9 @@ import{HttpClient, HttpClientModule}from '@angular/common/http'
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass:InterceptorService, multi: true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
