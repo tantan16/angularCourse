@@ -12,6 +12,7 @@ export class TodosComponent {
   constructor(private todosService: TodoService) {}
 
   ngOnInit(): void {
+    this.todosService.posts$.subscribe(res =>{console.log('nueva data', res)})
     // this.todosService.getTodos().subscribe((res: any) => {
     //   console.log(res);
     //   this.todos = res;
